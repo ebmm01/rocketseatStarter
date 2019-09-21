@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Javascript</title>
+</head>
+<body>
+
+    <div id="app">
+        <button onclick="mostraAlerta('Botão clicado')"> 
+            Me pressione
+        </button>
+        <!-- <button onmouseover="mostraAlerta('Mouse passou')"> 
+            Passe o mouse
+        </button> -->
+    </div>
+
+    <div id="app2">
+        <input type="text" name="nome" id="inputapp">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <div id="app3">
+
+    </div>
+
+    <div id="app4">
+        <div class="box"></div>
+    </div>
+    <script>
+        function mostraAlerta(msg) {
+            alert(msg);
+        }
+
+
+
+        //var inputElement = document.getElementById('inputapp')
+        var inputElement = document.querySelector('#inputapp');
+        var btnElement = document.querySelector('button.botao');
+        
+    
+        btnElement.onclick = function(){
+            var text = inputElement.value;
+
+            alert(text)
+        }
+        console.log(inputElement)
+    </script>
+
+    <script>
+        var linkElement = document.createElement('a');
+        var textElement = document.createTextNode('Link qualquer')
+        linkElement.setAttribute('href', '#')
+
+        linkElement.appendChild(textElement)
+
+        var containerElement = document.querySelector("#app3")
+        containerElement.appendChild(linkElement)
+
+    </script>
+
+    <script>
+        var boxElement = document.querySelector(".box")
+
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#f00'
+    </script>
+</body>
+</html>
