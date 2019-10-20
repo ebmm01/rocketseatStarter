@@ -10,6 +10,8 @@ mongoose.connect('mongodb://localhost:27017/nodeapi', {
     useUnifiedTopology: true,
 })
 
+require('./src/models/Product');
+
 app.get('/', (req, res) => {
     res.send('Hello world, esse é um teste =)');
 })
